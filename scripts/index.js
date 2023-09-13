@@ -17,7 +17,7 @@ system.afterEvents.scriptEventReceive.subscribe((ev)=>{
         if(hasMainItem(ev.sourceEntity,`minecraft:stick`)) {
             if(!ev.sourceEntity.getBlockFromViewDirection()) return
             ev.sourceEntity.cooltime1 = 5
-            ev.sourceEntity.dimension.createExplosion(ev.sourceEntity.getBlockFromViewDirection().block.location,300)
+            ev.sourceEntity.dimension.createExplosion(ev.sourceEntity.getBlockFromViewDirection().block.location,10)
         }
     }
 })
@@ -59,6 +59,10 @@ world.beforeEvents.chatSend.subscribe((ev) => {
                 } else {
                     sender.addTag(`chat`)
                 }
+                break
+            }
+            case `!name`: {
+                sender.nameTag = sub
                 break
             }
             case `!tnt`: {
