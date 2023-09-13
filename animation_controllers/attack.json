@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.attack": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "attack": "variable.attack_time"}
+                    ]
+                },
+                "attack": {
+                    "on_entry": [            
+                        "/scriptevent karo:attack"
+                    ],
+                    "transitions": [ { "default": "(1.0)"}]
+                }
+            }
+        }
+    }
+}
