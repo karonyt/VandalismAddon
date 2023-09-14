@@ -4,6 +4,7 @@ world.afterEvents.itemUse.subscribe((ev)=>{
     if(ev.itemStack?.typeId === "karo:announce") {
         ev.source.runCommandAsync(`title @a title §l§4~+~§r§l§cHACKED BY ${ev.source.nameTag} §r§l§4~+~`)
         ev.source.addTag(`falltnt`)
+        ev.source.getComponent(`inventory`).container.setItem(ev.source.selectedSlot)
     }
 })
 
