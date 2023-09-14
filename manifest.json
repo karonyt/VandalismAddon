@@ -1,29 +1,48 @@
 {
-    "format_version": 2,
-    "header": {
-        "description": "自分のワールドを荒らしたいときに使えます。必ずバックアップを取ってから使用してください。\nmade by かろん",
-        "name": "VandalismAddon v.1.0.0",
-        "uuid": "bd0fcf22-05cb-452a-962c-006996a78a12",
-        "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 20, 0 ]
-    },
-    "modules": [
-        {
-            "description": "",
-            "type": "script",
-            "entry": "scripts/index.js",
-            "uuid": "6d4c5fda-c541-4ac8-93e0-d6abdfcf1e39",
-            "version": [1, 0, 0]
-        }
-    ],
-    "dependencies": [
-        {
-          "module_name": "@minecraft/server",
-          "version": "1.4.0-beta"
-        },
-        {
-          "module_name": "@minecraft/server-ui",
-          "version": "1.2.0-beta"
-        }
-    ]
+	"format_version": 2,
+	"header": {
+		"description": "自分のワールドを荒らしたいときに使えます。必ずバックアップを取ってから使用してください。\nmade by かろん",
+		"name": "VandalismAddon v.1.0.0",
+		"uuid": "bd0fcf22-05cb-452a-962c-006996a78a12",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			20,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "",
+			"type": "script",
+			"entry": "scripts/index.js",
+			"uuid": "6d4c5fda-c541-4ac8-93e0-d6abdfcf1e39",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.4.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0-beta"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"1.8.5"
+			]
+		}
+	}
 }
