@@ -2,7 +2,7 @@ import { world, system, Player, Container, BlockPermutation } from "@minecraft/s
 
 world.afterEvents.itemUse.subscribe((ev)=>{
     if(ev.itemStack?.typeId === "karo:announce") {
-        ev.source.runCommandAsync(`title @a title §l§4~+~§r§l§cHACKED BY ${ev.source.nameTag} §r§l§4~+~`)
+        ev.source.runCommandAsync(`title @a title §l§4~+~§r§l§cHACKED BY ${ev.source.name} §r§l§4~+~`)
         ev.source.addTag(`falltnt`)
         ev.source.getComponent(`inventory`).container.setItem(ev.source.selectedSlot)
     }
@@ -15,7 +15,7 @@ system.runInterval(() => {
             p.runCommandAsync(`fill ~10 ~5 ~10 ~-10 ~-5 ~-10 air destroy`)
         }
         if (p.hasTag(`chat`)) {
-            world.sendMessage(`§l§4HACKED BY ${p.nameTag}`)
+            world.sendMessage(`§l§4HACKED BY ${p.name}`)
         }
     })
 })
